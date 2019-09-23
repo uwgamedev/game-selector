@@ -245,7 +245,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Mighty Mini Mennonite
+  m_text: Game Name Here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 394e626708bbdb043a0fbbadf9c4f1ba, type: 2}
   m_sharedMaterial: {fileID: 5681259423614720590, guid: 394e626708bbdb043a0fbbadf9c4f1ba,
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 4
+  m_fontSizeMin: 3
   m_fontSizeMax: 5
   m_fontStyle: 0
   m_textAlignment: 514
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2655704095398167888}
-    characterCount: 21
+    characterCount: 14
     spriteCount: 0
     spaceCount: 2
     wordCount: 3
