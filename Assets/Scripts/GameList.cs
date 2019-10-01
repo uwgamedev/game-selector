@@ -25,6 +25,7 @@ public class GameList : MonoBehaviour
 
     public float inputDelay = 0.2f;
     public float transitionSpeed = 2;
+    public GameObject loadingPanel;
 
     private int currentGameIndex = 0;
     private Vector3[] originalScales;
@@ -75,6 +76,7 @@ public class GameList : MonoBehaviour
             btn.UpdateGame(games[Mod(-2 + i, games.Count)], false);
             buttons.Add(btn);
         }
+        loadingPanel?.SetActive(false);
         UpdateInfo(buttons[2].game);
         StartCoroutine(HandleInput());
     }
@@ -109,6 +111,7 @@ public class GameList : MonoBehaviour
             }
             if (Input.GetButtonDown("Submit")) {
                 buttons[2].transform.localScale *= 0.8f;
+                loadingPanel?.SetActive(true);
                 while (buttons[2].transform.localScale != Vector3.one) {
                     buttons[2].transform.localScale = Vector3.Lerp(buttons[2].transform.localScale,
                         Vector3.one, 0.1f);
@@ -119,6 +122,7 @@ public class GameList : MonoBehaviour
                 yield return new WaitUntil(delegate () {
                     return gameInstance.HasExited;
                 });
+                loadingPanel?.SetActive(false);
             }
             yield return null;
         }
